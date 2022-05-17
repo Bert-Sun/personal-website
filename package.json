@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/index.js",
+    "zip": "zip -r public public/",
+    "unzip": "unzip -u public.zip"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,7 @@
   },
   "homepage": "https://github.com/Bert-Sun/personal-website#readme",
   "dependencies": {
+    "ejs": "^3.1.8",
     "express": "^4.18.1"
   }
 }

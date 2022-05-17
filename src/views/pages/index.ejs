@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+
+
+<body>
+<main>
+  <div class="container-fluid d-flex flex-column px-0" style="min-height: 100vh">
+    <%- include('../partials/header'); %>
+    <div class="container-fluid pt-3 flex-fill" style="max-width: 60rem">
+
+      <div class="jumbotron jumbotron-fluid px-3">
+        <div class="text-center"><img src="/img/me-square.jpg" class="img-fluid rounded-circle float-center" style="width: 20rem; height:auto"></div>
+        <noscript><h1 class="text-center display-4">Hi, I'm Bert.</h1></noscript>
+        <h1 class="text-center display-4" id="typer"></h1>
+        <p class="text-center fs-5">If you're looking for me, this is the right place.</p>
+      </div>
+      
+      <div class="container-fluid px-3">
+        <p class="pt-3 text-start fs-6">
+          I am a student at the University of Waterloo pursuing a <b>Bachelors of Mathematics in Data Science.</b>
+          For those unfamiliar, Data Science lies in the intersection between Computer Science and Statistics.
+        </p>
+        <p class="text-start fs-6">Outside of my major, my academic interests lie in <b>Pure Math</b>. As I learn more, I hope to be able to get involved with <b>Quantum Information</b> as well.</p>
+        <p class="text-start fs-6">I plan on pursuing a Pure Math minor, as well as either an Applied Math or Combinatorics and Optimization minor.</p>
+        <p class="text-start fs-6">I promise I'm not as boring as my short academic introduction though, <a href="/about" class="text-dark">click here for more info on me!</a></p>
+      </div>
+    </div>
+    <footer>
+      <%- include('../partials/footer'); %>
+    </footer>
+  </div>
+</main>
+
+
+<script src="/js/typer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+  <link href="/css/buttons.css" rel="stylesheet">
+</head>
+
+
+<body>
+<main>
+  <div class="container-fluid d-flex flex-column px-0" style="min-height: 100vh">
+    <%- include('../partials/header'); %>
+    <div class="container-fluid pt-3 flex-fill" style="max-width: 60rem; position:relative">
+
+      <div class="jumbotron jumbotron-fluid px-3">
+        <h1 class="text-center display-4">About Me</h1>
+        <div id="about-nav" class="container-fluid px-0 d-flex flex-row list-group justify-content-center">
+          <a href="#general" class="px-3 fs-5 text-dark">General</a>
+          <a href="#tech" class="px-3 fs-5 text-dark">Tech Stuff</a>
+          <a href="#interest" class="px-3 fs-5 text-dark">Interests</a>
+        </div>
+      </div>
+
+      <hr>
+
+      <div data-bs-spy="scroll" class="container-fluid px-3 scrollspy">
+        <div class="container-fluid px-0 pt-3" id="general">
+          <p class="display fs-4 pb-3"><u>General Things</u></p>
+          <p>
+            I am a student at the University of Waterloo pursuing a <b>Bachelors of Mathematics in Data Science.</b>
+            For more on my math interests, check out <a href="#math" class="text-dark">my math subsection.</a>
+          </p>
+          <p>
+            I am most familiar with <span class="text-primary"><b>C++ (and its STL)</b></span>, <span class="text-success"><b>Python</b></span> and <span class="text-danger"><b>JavaScript</b></span>, 
+            and libraries such as <span class="text-success"><b>TensorFlow, NumPy and pandas</b></span>, <span class="text-danger"><b>Node.js and TypeScript</b></span>.
+            I'm still comfortable using other languages such <b>SQL</b> and <b>VBA</b> for MS Access and Excel.
+          </p>
+          <p>
+            Outside of studying, I enjoy playing video games such as <b>Borderlands 2</b>, <b>Apex Legends</b> and <b>Valorant</b> to name a few. (I'm terrible though 😊)
+          </p>
+          <div class="d-flex justify-content-center"><hr style="width: 10rem;"></div>
+        </div>
+
+        <div class="container-fluid px-0" id="tech">
+          <p class="display fs-4 pb-3"><u>More Tech Details</u></p>
+          <p class="fs-6">Here's a list of programming languages/frameworks I'm familar with, and things that I've done with them.</p>
+          <div class="container-fluid d-flex flex-row">
+            <div class="container-fluid flex-shrink-1" style="max-width: 6rem;">
+              <ul>
+                <li>
+                  <a href="javascript:go('cpp')" class="text-dark nav-button rounded nav-button-active" id="cpp-btn">C++</a>
+                </li>
+                <li>
+                  <a href="javascript:go('python')" class="text-dark nav-button rounded" id="python-btn">Python</a>
+                </li>
+                <li>
+                  <a href="javascript:go('node')" class="text-dark nav-button rounded" id="node-btn">Node.js</a>
+                </li>
+                <li>
+                  <a href="javascript:go('sql')" class="text-dark nav-button rounded" id="sql-btn">SQL</a>
+                </li>
+                <li>
+                  <a href="javascript:go('vba')" class="text-dark nav-button rounded" id="vba-btn">VBA</a>
+                </li>
+              </ul>
+            </div>
+            <div class="container-fluid flex-grow-1 ms-5 px-3 text-wrap shadow rounded" id="lang-descriptor">
+              <div id="cpp">
+                <p>C++ was my first programming language, having learned it with the purpose of using it for competitive programming.
+                Eventually, I went onwards to use it to build firmware for my <a href="#keyboard" class="text-dark">keyboard</a>, and experiment
+                with CUDA programming. 
+                My favourite resource for anyone beginning to learn C++ syntax or programming methodologies would be
+                <a class="text-dark" href="https://www.youtube.com/channel/UCQ-W1KE9EYfdxhL6S4twUNw" target="_blank">The Cherno</a>.
+                Just as when you speak a language fluently and don't have to think about grammar, The Cherno has helped me develop an intuitive
+                sense for C++ idiomatic code and best coding practices. </p>
+              </div>
+              <div id="python" style="display:none">
+                <p>Python was one of those languages that I ended up picking up simply because everyone else around me used Python instead of C++.
+                While at first I didn't enjoy the "Oh yeah, this thing that you want to do has been done for you, you just have to know that it's hiding 
+                in this library" aspect. However, as I started getting more into AI/ML it slowly became more evident how useful it was to have libraries such as
+                NumPy or pandas at my disposal. </p>
+              </div>
+              <div id="node" style="display:none">
+                <p>In terms of building websites, Node.js and MEAN stack are what I feel most comfortable with. Starting out with a few hackathon projects, I've moved on
+                to build a e-commerce website for Aceway Canada on Node, as well as my own personal website. While I could not say I am a master using Node, I have
+                become quite familiar with using Node for any full stack development I would want to do.</p>
+              </div>
+              <div id="sql" style="display:none">
+                <p>
+                  My first foray into relational databases was using SQL to maintain a catalogue of searchable parts for Aceway Canada. On top of being searchable by
+                  a short description, parts were also categorized as compatible with certain car manufacturers, models and years, and some even engine sizes!
+                  A lot of my knowledge on relational databases comes from having to suffer through the headache of redesigning and modifying old (and badly designed)
+                  schemas to suit newer specifications.
+                </p>
+              </div>
+              <div id="vba" style="display:none">
+                While I claim C++ as my first programming language, VBA was the first language I was exposed to when I attended a math summer camp in grade 6.
+                Even though I managed to make a (barely) functional Cookie Clicker clone, I quickly forgot about VBA. However, as I started helping my mother with
+                some of her tasks, I was able to quickly pick up VBA once again to help her with fixing the buggy code left behind by other coop students after their
+                term ended. 
+              </div>
+            </div>
+
+          </div>
+
+          <div class="d-flex justify-content-center"><hr style="width: 10rem;"></div>
+        </div>
+
+        <div class="container-fluid px-0 pb-4" id="interest">
+          <p class="display fs-4 pb-3"><u>My Interests</u></p>
+
+          <div id="math">
+            <p class="fs-5">Mathematical Interests</p>
+            <p>
+              My interest for the field of mathematics began in grade 7 when my parents sent me off to take extracurricular math classes.
+              I quickly realized how fun it was to make sense of complex formulas to derive results that looked like pure magic.
+              The same summer when I attended a math camp (also where I learned <a href="javascript:go('vba'); set('#tech')" class="text-dark">VBA</a>)
+              I was introduced to group theory. To my grade 7 brain that had only worked with numbers, seeing an underlying structure to not only all of
+              math as I knew it sparked my interest.
+              To this day, I remain interested in <b>abstract algebra</b>. I hope that as I continue to study more abstract algebra, I can eventually learn content
+              relevant to <b>quantum information</b>.
+            </p>
+          </div>
+
+          <div id="gaming">
+            <p class="fs-5">Games I Play</p>
+            <p>
+              Other than <b>Borderlands 2</b>, <b>Apex</b> and <b>Valorant</b> already mentioned above, I also enjoy relaxing on a server
+              with friends playing modded <b>Minecraft</b> and <b>Terraria</b>. I've hosted my own Minecraft and <b>Factorio</b> servers before! 
+            </p>
+            <p>Here's a short curated list of my all time favourites:</p>
+            <p class="pb-0">
+              <b>The Portal Series:</b> <br>
+              I can never leave a logic problem alone. Whether it be math or a puzzle-solving game, once I am presented with a challenge I have to sit down and complete it.
+              On top of the base game are community made maps that push your brain even further, and even 
+              <a href="https://store.steampowered.com/app/1255980/Portal_Reloaded/" target="_blank" class="text-dark">time portals</a>
+              to hurt your brain even further.
+            </p>
+          </div>
+          
+          <div id="keyboard">
+            <p class="fs-5">Keyboards</p>
+            <div class="container-fluid px-0">
+              <p>
+                Being a programmer, I could not neglect my most used tool: my keyboard. Currently as I writing up this website, I am using a Mr. Suit R2 with Gateron Ink Blacks.
+                While having a neat keyboard and nice marble-y typing sound is quite awesome, I did end up learning a lot as I delved into this hobby as well.
+                Currently I'm getting into writing my own custom firmware using <a href="https://github.com/qmk/qmk_firmware" target="_blank" class="text-dark">QMK</a>
+                and handwiring a custom 3D print. In the future, I hope to also work with a few engineering friends to also CNC a metal case and perhaps even have a PCB printed
+                instead of handwiring.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="container-fluid px-0 pb-5" id="template" style="display:none">
+          <p class="display fs-4 pb-3"><u>TITLE</u></p>
+          <p class="fs-6">CONTENT</p>
+          <div class="d-flex justify-content-center"><hr style="width: 10rem;"></div>
+        </div>
+
+      </div>
+    </div>
+    <footer>
+      <%- include('../partials/footer'); %>
+    </footer>
+  </div>
+</main>
+
+<script src="js/langswap.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
